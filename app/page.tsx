@@ -54,7 +54,7 @@ const content = [
 export default function Home() {
   return (
   <div className="bg-black min-h-[200vh] w-full overscroll-contain overscroll-y-none"> 
-  <div className="flex flex-col justify-center antialiased items-center w-full h-full">
+  <div className="flex flex-col antialiased items-center w-full h-full">
     <Navbar />
     <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
@@ -88,7 +88,8 @@ export default function Home() {
       Software Engineer | FullStack Developer with Passion for Problem Solving
       </div>
     </div>
-    <div className="flex justify-center text-center">
+    <div className="flex flex-col w-full ">
+      <div className="flex justify-center">
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"
@@ -96,6 +97,13 @@ export default function Home() {
       >
         <span>Checkout Resume</span>
       </HoverBorderGradient>
+      </div>
+      
+      <div className="pl-10 w-full flex items-start ">
+      <h1 className="mt-[20vh] md:text-7xl text-5xl text-white font-bold text-center relative z-20 tracking-wider">
+        Work Experience
+      </h1>
+      </div>
     </div>
     <div className="p-10">
       <StickyScroll content={content} />
