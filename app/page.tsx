@@ -54,7 +54,7 @@ const content = [
 export default function Home() {
   return (
   <div className="bg-black min-h-[200vh] w-full overscroll-contain overscroll-y-none"> 
-  <div className="flex flex-col justify-center items-center w-full h-full">
+  <div className="flex flex-col justify-center antialiased items-center w-full h-full">
     <Navbar />
     <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
