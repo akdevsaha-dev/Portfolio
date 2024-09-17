@@ -4,9 +4,10 @@ import { cn } from "@/lib/utils";
 import { Spotlight } from "../components/ui/spotlight";
 import { SparklesCore } from "../components/ui/sparkles";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
-import { div } from "framer-motion/m";
 import { StickyScroll } from "../components/ui/sticky-scroll-reveal";
-import Image from 'next/image';
+import { HeroParallax } from "../components/ui/hero-parallax";
+import { WavyBackground } from "../components/ui/wavy-background";
+import { AnimatedTooltip } from "../components/ui/animated-tooltip";
 const content = [
   {
     title: "Collaborative Editing",
@@ -99,7 +100,199 @@ export default function Home() {
     <div className="p-10">
       <StickyScroll content={content} />
     </div>
+    <HeroParallax products={products} />;
+    <WavyBackground className="max-w-4xl mx-auto pb-40">
+      <p className="text-[80px] text-white font-bold inter-var text-center">
+        My techstack
+      </p>
+      <p className="text-base md:text-xl mt-4 text-white font-semibold inter-var text-center">
+        Here are few amazing technologies i have worked with and deep dive into
+      </p>
+      <div className="flex flex-row items-center justify-center mt-5 mb-10 w-full">
+      <AnimatedTooltip items={stack} />
+    </div>
+    </WavyBackground>
   </div>
   </div>  
   );
 }
+
+const stack = [
+  {
+    id: 1,
+    name: "HTML",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png",
+  },
+  {
+    id: 2,
+    name: "CSS",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png",
+  },
+  {
+    id: 3,
+    name: "Javascript",
+    image:
+      "https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_1280.png",
+  },
+  {
+    id: 4,
+    name: "MongoDB",
+    image:
+       "https://cdn.prod.website-files.com/6371f3e94a645947f33e2581/6371f3e94a6459e24e3e2d01_Partner_Logos_MongoDB.jpg",
+  },
+  {
+    id: 5,
+    name: "Express.js",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCZkDdSEhC0GBuIXxqSVxu5OlO35teE_gLHQ&s",
+  },
+  {
+    id: 6,
+    name: "React.js",
+    image:
+      "https://assets.stickpng.com/thumbs/62a74dd1223343fbc2207d00.png",
+  },
+  {
+    id: 7,
+    name: "Node.js",
+    image:
+      "https://banner2.cleanpng.com/20180425/jrw/ave9tlfdy.webp",
+  },
+  {
+    id: 8,
+    name: "Next.js",
+    image:
+      "https://i.pinimg.com/736x/32/9a/d8/329ad85f4ab2047cae13d582274f9270.jpg",
+  },
+  {
+    id: 9,
+    name: "Typescript",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzAyxDsXAv0DYruT0KSin2YgggqZCWTt2biQ&shttps://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/800px-Typescript_logo_2020.svg.png",
+  },
+  {
+    id: 10,
+    name: "Tailwind",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU-mspyndicMBTk-KdKp96OZiaD2rkYLYzFQ&s",
+  },
+  {
+    id: 11,
+    name: "Postgres",
+    image:
+      "https://ih1.redbubble.net/image.5494718957.6127/st,small,507x507-pad,600x600,f8f8f8.jpg",
+  },
+  {
+    id: 12,
+    name: "Cloudfare Workers",
+    image:
+      "https://static-00.iconduck.com/assets.00/cloudflare-icon-2048x2048-k5hf9ugn.png",
+  },
+  {
+    id: 13,
+    name: "Docker",
+    image:
+      "https://banner2.cleanpng.com/20180802/ipp/c26b0dc2951a5195ae50c46f6be2544e.webp",
+  },
+
+  
+];
+
+
+export const products = [
+  {
+    title: "Moonbeam",
+    link: "https://gomoonbeam.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+  },
+  {
+    title: "Cursor",
+    link: "https://cursor.so",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+  },
+  {
+    title: "Rogue",
+    link: "https://userogue.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+  },
+ 
+  {
+    title: "Editorially",
+    link: "https://editorially.org",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+  },
+  {
+    title: "Editrix AI",
+    link: "https://editrix.ai",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+  },
+  {
+    title: "Pixel Perfect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+  },
+ 
+  {
+    title: "Algochurn",
+    link: "https://algochurn.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+  },
+  {
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+  },
+  {
+    title: "Tailwind Master Kit",
+    link: "https://tailwindmasterkit.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+  },
+  {
+    title: "SmartBridge",
+    link: "https://smartbridgetech.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+  },
+  {
+    title: "Renderwork Studio",
+    link: "https://renderwork.studio",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+  },
+ 
+  {
+    title: "Creme Digital",
+    link: "https://cremedigital.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+  },
+  {
+    title: "Golden Bells Academy",
+    link: "https://goldenbellsacademy.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+  },
+  {
+    title: "Invoker Labs",
+    link: "https://invoker.lol",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+  },
+  {
+    title: "E Free Invoice",
+    link: "https://efreeinvoice.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+  },
+];
