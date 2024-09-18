@@ -1,13 +1,10 @@
 "use client";
 import React from "react";
 import { Boxes } from "../../components/ui/background-boxes";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
 import Link from "next/link";
 import { Navbar } from "@/components/ui/Navbar";
-import { div } from "framer-motion/client";
-
 export default function BackgroundBoxesDemo() {
   return (
     <div className="min-h-[100vh] w-full">

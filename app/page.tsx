@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/ui/Navbar";
 import React from "react";
-import { cn } from "@/lib/utils";
 import { Spotlight } from "../components/ui/spotlight";
 import { SparklesCore } from "../components/ui/sparkles";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
@@ -50,81 +49,6 @@ const content = [
     ),
   },
 ];
-
-export default function Home() {
-  return (
-  <div className="bg-black min-h-[200vh] w-full overscroll-contain overscroll-y-none"> 
-  <div className="flex flex-col antialiased items-center w-full h-full">
-    <Navbar />
-    <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
-      <div className="h-[35rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="mt-[20vh] md:text-7xl text-5xl text-white font-bold text-center relative z-20 tracking-wider">
-        Akdev Saha
-      </h1>
-      <div className="w-[90rem] h-40 relative mt-3">
-        {/* Gradients */}
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
- 
-        {/* Core component */}
-        <SparklesCore
-          background="transparent"
-          minSize={0.4}
-          maxSize={1}
-          particleDensity={1200}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
- 
-        {/* Radial Gradient to prevent sharp edges */}
-        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
-      </div>
-      <div className="text-white text-xl w-[35vw] text-center">
-      Software Engineer | FullStack Developer with Passion for Problem Solving
-      </div>
-    </div>
-    <div className="flex flex-col w-full ">
-      <div className="flex justify-center">
-      <HoverBorderGradient
-        containerClassName="rounded-full"
-        as="button"
-        className="dark:bg-black bg-dark text-white dark:text-white flex items-center px-10 py-4"
-      >
-        <span>Checkout Resume</span>
-      </HoverBorderGradient>
-      </div>
-      
-      <div className="pl-10 w-full flex items-start ">
-      <h1 className="mt-[20vh] md:text-7xl text-5xl text-white font-bold text-center relative z-20 tracking-wider">
-        Work Experience
-      </h1>
-      </div>
-    </div>
-    <div className="p-10">
-      <StickyScroll content={content} />
-    </div>
-    <HeroParallax products={products} />;
-    <WavyBackground className="max-w-4xl mx-auto pb-40">
-      <p className="text-[80px] text-white font-bold inter-var text-center">
-        My techstack
-      </p>
-      <p className="text-base md:text-xl mt-4 text-white font-semibold inter-var text-center">
-        Here are few amazing technologies i have worked with and deep dive into
-      </p>
-      <div className="flex flex-row items-center justify-center mt-5 mb-10 w-full">
-      <AnimatedTooltip items={stack} />
-    </div>
-    </WavyBackground>
-  </div>
-  </div>  
-  );
-}
-
 const stack = [
   {
     id: 1,
@@ -209,7 +133,7 @@ const stack = [
 ];
 
 
-export const products = [
+const products = [
   {
     title: "Moonbeam",
     link: "https://gomoonbeam.com",
@@ -304,3 +228,78 @@ export const products = [
       "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
   },
 ];
+
+export default function Home() {
+  return (
+  <div className="bg-black min-h-[200vh] w-full overscroll-contain overscroll-y-none"> 
+  <div className="flex flex-col antialiased items-center w-full h-full">
+    <Navbar />
+    <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
+      <div className="h-[35rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <h1 className="mt-[20vh] md:text-7xl text-5xl text-white font-bold text-center relative z-20 tracking-wider">
+        Akdev Saha
+      </h1>
+      <div className="w-[90rem] h-40 relative mt-3">
+        {/* Gradients */}
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+ 
+        {/* Core component */}
+        <SparklesCore
+          background="transparent"
+          minSize={0.4}
+          maxSize={1}
+          particleDensity={1200}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+ 
+        {/* Radial Gradient to prevent sharp edges */}
+        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+      </div>
+      <div className="text-white text-xl w-[35vw] text-center">
+      Software Engineer | FullStack Developer with Passion for Problem Solving
+      </div>
+    </div>
+    <div className="flex flex-col w-full ">
+      <div className="flex justify-center">
+      <HoverBorderGradient
+        containerClassName="rounded-full"
+        as="button"
+        className="dark:bg-black bg-dark text-white dark:text-white flex items-center px-10 py-4"
+      >
+        <span>Checkout Resume</span>
+      </HoverBorderGradient>
+      </div>
+      
+      <div className="pl-10 w-full flex items-start ">
+      <h1 className="mt-[20vh] md:text-7xl text-5xl text-white font-bold text-center relative z-20 tracking-wider">
+        Work Experience
+      </h1>
+      </div>
+    </div>
+    <div className="p-10">
+      <StickyScroll content={content} />
+    </div>
+    <HeroParallax products={products} />
+    <WavyBackground className="max-w-4xl mx-auto pb-40">
+      <p className="text-[80px] text-white font-bold inter-var text-center">
+        My techstack
+      </p>
+      <p className="text-base md:text-xl mt-4 text-white font-semibold inter-var text-center">
+        Here are few amazing technologies i have worked with and deep dive into
+      </p>
+      <div className="flex flex-row items-center justify-center mt-5 mb-10 w-full">
+      <AnimatedTooltip items={stack} />
+    </div>
+    </WavyBackground>
+  </div>
+  </div>  
+  );
+}
+
